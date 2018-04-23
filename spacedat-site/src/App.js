@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
-import logo from './img/ppp.jpg';
-import { connect } from 'redux-zero/react';
+import { connect, Connect } from 'redux-zero/react';
 import './App.css';
+import {Header} from './Components/Header';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">SPACEDAT</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+const App = ({personal}) => {
+  return (
+    <div>
+      <Header name={} who={}/>
+    </div>
+  );
 }
 
-export default App;
+const mapToProps = ({personal}) => ({personal});
+export default Connect (mapToProps)(App);
